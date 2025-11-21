@@ -1,4 +1,5 @@
 import { register } from '../types/type';
+import { ReactNode } from 'react';
 
 export abstract class Action2 implements register {
     id: string;
@@ -11,7 +12,7 @@ export abstract class Action2 implements register {
         this.content = props.content;
     }
     // Puede devolver JSX para renderizarlo en un contenedor
-    abstract run(): void | React.ReactNode | string;
+    abstract run(): void | ReactNode | string;
 }
 
 const registry = new Map<string, Action2>();
@@ -20,8 +21,8 @@ const registry = new Map<string, Action2>();
 export function registerAction(ActionClass: new () => Action2) {
     const instance = new ActionClass();
     registry.set(instance.id, instance);
-    if (typeof instance.run !== 'function') {
-        instance.run()
+    if (typeof instance.run === 'function') {
+        instance.run();
     }
 
     const proto =
@@ -31,7 +32,6 @@ export function registerAction(ActionClass: new () => Action2) {
 
 
     for (const name of methodNames) {
-        console.log(`⚡ Ejecutando método adicional: ${name}`);
         (instance as any)[name](); // ejecuta el método
     }
     return instance;
