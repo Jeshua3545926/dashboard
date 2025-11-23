@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Boleta from "./pages/boletas/boleta";
 import App from "./pages/App";
 
 
@@ -9,42 +10,42 @@ export const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
-  {
-    path: "/boletas",
-    element: <Boletas />,
+{
+    path: "/boleta",
+    element: <Boleta />,
   },
-  {
-    path: "/alumnos",
-    element: <Alumnos />,
-  },
-  {
-    path: "/credencial",
-    element: <Credencial />,
-  },
-  {
-    path: "/reportes",
-    element: <Reportes />,
-  },
-  {
-    path: "/avisos",
-    element: <Avisos />,
-  },
-  {
-    path: "/horarios",
-    element: <Horarios />,
-  },
-  {
-    path: "/cursos",
-    element: <Cursos />,
-  },
-  {
-    path: "/horarios-examenes",
-    element: <HorariosExamenes />,
-  },
-  {
-    path: "/actividades",
-    element: <Actividades />,
-  },
+  // {
+  //   path: "/alumnos",
+  //   element: <Alumnos />,
+  // },
+  // {
+  //   path: "/credencial",
+  //   element: <Credencial />,
+  // },
+  // {
+  //   path: "/reportes",
+  //   element: <Reportes />,
+  // },
+  // {
+  //   path: "/avisos",
+  //   element: <Avisos />,
+  // },
+  // {
+  //   path: "/horarios",
+  //   element: <Horarios />,
+  // },
+  // {
+  //   path: "/cursos",
+  //   element: <Cursos />,
+  // },
+  // {
+  //   path: "/horarios-examenes",
+  //   element: <HorariosExamenes />,
+  // },
+  // {
+  //   path: "/actividades",
+  //   element: <Actividades />,
+  // },
 
   
   
