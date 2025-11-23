@@ -13,7 +13,7 @@
 h1{
   background-color: transparent;
   color: rgba(255, 255, 255, 0.559);
-  margin-left: 20px;
+  margin-left: -1200px;
   font-style: italic;
   margin-top: 10px;
   font-family: 'Press Start';
@@ -83,7 +83,7 @@ li:hover {
   transform:  translateX(5px) scale(1.2);
   cursor: pointer;
   padding: 10px;
-  margin-left: 50px;   /* Se moverá sí o sí */
+  margin-left:50px;   /* Se moverá sí o sí */
   
 }
 
