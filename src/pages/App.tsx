@@ -13,6 +13,9 @@ const navigate = useNavigate();
   const handleCursos = () => {
     navigate('/cursos')
   }
+  const handleHorario = () => {
+    navigate('/horario')
+  }
   return (
     <div className="App">
       <h1>Panel de Control</h1><section className='linea'></section>
@@ -24,7 +27,7 @@ const navigate = useNavigate();
             <li><button>Credencial</button></li>
             <li><button>Reportes</button></li>
             <li><button>Avisos</button></li>
-            <li><button>Horarios</button></li>
+            <li><button onClick={handleHorario}>Horarios</button></li>
             <li><button onClick={handleCursos}>Cursos</button></li>
             <li><button>Horarios de examenes </button></li>
             <li><button>Actividades</button></li>
