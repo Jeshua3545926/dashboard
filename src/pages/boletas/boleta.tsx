@@ -1,18 +1,34 @@
 import './media/boleta.css';
+import { useState } from 'react';
+
 const Boleta = () => {
+  const [showTable, setShowTable] = useState(false);
   return (
     <div className='principal'>
-
-      <div className="alumno">
-        <h2>Oswaldo Ramon Garcia Linda</h2>
-        <button>Click Aqui</button>
-      </div>
-       <div className="alumno">
-        <h2>Jeshua Abiram Garza Romero</h2>
-        <button>Click Aqui</button>
-      </div>
-
-      {/* <table className="report">
+      <aside className="sidebar">
+        <div className="alumno">
+          <div className="alumno-header">
+            <h2 className="alumno-name" onClick={() => setShowTable(v => !v)}>Oswaldo Ramon Garcia Linda</h2>
+            <span className="chip">3°A</span>
+          </div>
+        </div>
+        <div className="alumno">
+          <div className="alumno-header">
+            <h2 className="alumno-name" onClick={() => setShowTable(v => !v)}>Jeshua Abiram Garza Romero</h2>
+            <span className="chip">3°B</span>
+          </div>
+        </div>
+      </aside>
+      <section className="boleta-panel">
+        <div className={`Tabla${showTable ? ' visible' : ''}`}>
+          <div className="panel-header">
+            <h2>Boleta de calificaciones</h2>
+            <div className="actions">
+              <button className="btn secondary">Exportar</button>
+            </div>
+          </div>
+          <div className="table-container">
+            <table className="report">
         <thead>
           <tr>
             <th className="col-clave">Materias</th>
@@ -90,8 +106,13 @@ const Boleta = () => {
           </tr>
 
         </tbody>
-      </table> */}
+      </table>
+          </div>
+        </div>
+      </section>
     </div>
+
+
 
 
 

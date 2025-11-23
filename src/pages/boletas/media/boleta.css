@@ -1,24 +1,35 @@
+.Tabla {
+  display: none;
+}
+
+.Tabla.visible {
+  display: block;
+}
 
 table.report {
-  width: 80%;
+  width: 40%;
   border-collapse: collapse;
   background: rgba(255, 255, 255, 0.588);
   font-size: 20px;
   margin-left: 160px;
   margin-top: 60px;
+  height: 20%;
   border-radius: 10px 10px;
 }
+
 h2 {
   text-align: center;
   margin-top: 40px;
   font-size: 28px;
   color: #ffffff;
 }
-.principal{
-    display:grid;
-    height: 100vh;
-    grid-template-columns:repeat(2,1fr);
-    
+
+.principal {
+  display: grid;
+  background-color: #182132;
+  height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+
 }
 
 table.report thead th {
@@ -29,24 +40,24 @@ table.report thead th {
   font-weight: bold;
 }
 
-.alumno{
-    margin: 200px 20px 20px 20px;
-    border-radius: 10px;
-    color: rgba(255, 255, 255, 0.656);
-    background-color: rgba(0, 0, 0, 0.61);
+.alumno {
+  margin: 200px 20px 20px 20px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.656);
+  background-color: rgba(0, 0, 0, 0);
 }
 
-button{
-    color: white;
-    margin-left: 310px;
+button {
+  color: white;
+  margin-left: 310px;
 }
 
-.col-clave{
-    border-radius: 10px 0px 0px 0px;
+.col-clave {
+  border-radius: 10px 0px 0px 0px;
 }
 
-.tercer{
-    border-radius: 0px 10px 0px 0px;
+.tercer {
+  border-radius: 0px 10px 0px 0px;
 }
 
 table.report tbody td {
@@ -56,10 +67,24 @@ table.report tbody td {
 
 /* Columnas */
 
-.col-clave { width: 140px; }
-.col-assign { width: 45%; }
-.col-grades { width: 80px; text-align: center; }
-.tercer{ width: 80px; text-align: center; }
+.col-clave {
+  width: 140px;
+}
+
+.col-assign {
+  width: 45%;
+}
+
+.col-grades {
+  width: 80px;
+  text-align: center;
+}
+
+.tercer {
+  width: 80px;
+  text-align: center;
+}
+
 /* Rayado tipo cebra */
 table.report tbody tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.03);
