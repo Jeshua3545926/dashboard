@@ -1,38 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
+.header {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.559);
+  margin-left: 20px;
+  font-style: italic;
+  margin-top: 10px;
+  font-family: 'Press Start';
+  text-align: left;
+}
+@keyframes mouse {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+h1:hover{
+  animation: mouse 0.5s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.718);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.linea{
+  width: 83%;
+  margin-top: -25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.453);
+  margin-left: 240px;
 }
+
+ul {
+
+  text-align: left;
+  padding-left: 20px;
+}
+::-webkit-scrollbar-thumb {
+  display: none;
+  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 40px;
+  transition: all 0.5s ease;
+}
+
+button {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  font-family: 'Press Start';
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.337);
+
+}
+
+.nav {
+  margin-bottom: 100px;
+  margin-left:30px;
+
+}
+
+li:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.258);
+  transform:  translateX(5px) scale(1.2);
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 50px;   /* Se moverá sí o sí */
+  
+}
+
+button:hover{
+  background: linear-gradient(to right, rgba(255, 255, 255, 0),rgb(255,255,255), rgb(255, 255, 255));
+  background-clip: text;
+  text-shadow: 0 0 100px rgb(255, 255, 255);
+  -webkit-background-clip: text; /* necesario para Chrome */
+  color: transparent;
+
+}
+
