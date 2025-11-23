@@ -8,6 +8,12 @@ table.report {
   margin-top: 60px;
   border-radius: 10px 10px;
 }
+h2.alumno {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 28px;
+  color: #ffffff;
+}
 
 table.report thead th {
   background: #bfc4ced2;
@@ -17,11 +23,11 @@ table.report thead th {
   font-weight: bold;
 }
 
-.col-code{
+.col-clave{
     border-radius: 10px 0px 0px 0px;
 }
 
-.ultimo{
+.tercer{
     border-radius: 0px 10px 0px 0px;
 }
 
@@ -31,11 +37,11 @@ table.report tbody td {
 }
 
 /* Columnas */
-.col-code { width: 120px; }
+
 .col-clave { width: 140px; }
 .col-assign { width: 45%; }
 .col-grades { width: 80px; text-align: center; }
-
+.tercer{ width: 80px; text-align: center; }
 /* Rayado tipo cebra */
 table.report tbody tr:nth-child(even) {
   background: rgba(0, 0, 0, 0.03);
