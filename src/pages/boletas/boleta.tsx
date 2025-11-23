@@ -1,10 +1,15 @@
 import './media/boleta.css';
 const Boleta = () => {
   return (
-    <div>
+    <div className='principal'>
 
       <div className="alumno">
         <h2>Oswaldo Ramon Garcia Linda</h2>
+        <button>Click Aqui</button>
+      </div>
+       <div className="alumno">
+        <h2>Jeshua Abiram Garza Romero</h2>
+        <button>Click Aqui</button>
       </div>
 
       {/* <table className="report">

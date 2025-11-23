@@ -8,11 +8,16 @@ table.report {
   margin-top: 60px;
   border-radius: 10px 10px;
 }
-h2.alumno {
+h2 {
   text-align: center;
   margin-top: 40px;
   font-size: 28px;
   color: #ffffff;
+}
+.principal{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    
 }
 
 table.report thead th {
@@ -21,6 +26,18 @@ table.report thead th {
   border-bottom: 2px solid #d1d7e0d8;
   text-align: left;
   font-weight: bold;
+}
+
+.alumno{
+    margin: 200px 20px 20px 20px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.656);
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+button{
+    color: white;
+    margin-left: 310px;
 }
 
 .col-clave{
