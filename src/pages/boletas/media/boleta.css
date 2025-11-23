@@ -1,0 +1,42 @@
+
+table.report {
+  width: 80%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.588);
+  font-size: 20px;
+  margin-left: 160px;
+  margin-top: 60px;
+  border-radius: 10px 10px;
+}
+
+table.report thead th {
+  background: #bfc4ced2;
+  padding: 10px;
+  border-bottom: 2px solid #d1d7e0d8;
+  text-align: left;
+  font-weight: bold;
+}
+
+.col-code{
+    border-radius: 10px 0px 0px 0px;
+}
+
+.ultimo{
+    border-radius: 0px 10px 0px 0px;
+}
+
+table.report tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Columnas */
+.col-code { width: 120px; }
+.col-clave { width: 140px; }
+.col-assign { width: 45%; }
+.col-grades { width: 80px; text-align: center; }
+
+/* Rayado tipo cebra */
+table.report tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.03);
+}
