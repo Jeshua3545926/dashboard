@@ -147,6 +147,7 @@ table.report tbody tr:nth-child(even) {
   margin-bottom: 12px;
 }
 
+
 .actions {
   display: flex;
   gap: 8px;
