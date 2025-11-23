@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Boleta from "./pages/boletas/boleta";
 import App from "./pages/App";
 import Cursos from "./pages/cursos/cursos";
+import Horario from "./pages/Horario/horario";
 
 export const router = createBrowserRouter([
   /* Enrutador de secciones de la pagina  */
@@ -18,16 +19,10 @@ export const router = createBrowserRouter([
      path: "/cursos",
      element: <Cursos />,
    },
-  // {
-  //   path: "/horarios-examenes",
-  //   element: <HorariosExamenes />,
-  // },
-  // {
-  //   path: "/actividades",
-  //   element: <Actividades />,
-  // },
-
-
+  {
+    path: "/horario",
+    element: <Horario />,
+  }
 
 
 
