@@ -12,11 +12,11 @@ echo ##############################
 
 set /p option=Select an option (1-3):
 
-if "%opcion%" == 1 goto dependencies
-if "%opcion%" == 2 goto nodeJs
-if "%opcion%" == 3 goto npm
-if "%opcion%" == 4 goto git
-if "%opcion%" == 5 goto variasOpciones
+if "%option%" == 1 goto dependencies
+if "%option%" == 2 goto nodeJs
+if "%option%" == 3 goto npm
+if "%option%" == 4 goto git
+if "%option%" == 5 goto variasOpciones
 
 
 :dependencies
@@ -40,20 +40,3 @@ exit
 winget install -e --id git.git
 pause > nul
 exit
-
-:variasOpciones
-set /p option=selecciona las opciones que quieres instalar:
-if "%opcion%" ==  12 goto dependencies goto nodeJs
-if "%opcion%" == 13 goto npm goto dependencies
-if "%opcion%" == 23 goto nodeJs goto npm
-
-
-
-
-
- 
-
-
-
-
-

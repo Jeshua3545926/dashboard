@@ -26,9 +26,28 @@ export const router = createBrowserRouter([
     element: <Reportes />,
   },
   {
-    path: "/configuracion",
-    element: <Configuracion />,
+    path: "/avisos",
+    element: <Avisos />,
   },
+  {
+    path: "/horarios",
+    element: <Horarios />,
+  },
+  {
+    path: "/cursos",
+    element: <Cursos />,
+  },
+  {
+    path: "/horarios-examenes",
+    element: <HorariosExamenes />,
+  },
+  {
+    path: "/actividades",
+    element: <Actividades />,
+  },
+
+  
+  
 
   
 ]);

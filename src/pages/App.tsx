@@ -19,7 +19,12 @@ const navigate = useNavigate();
             <li><button>Alumnos</button></li>
             <li><button>Credencial</button></li>
             <li><button>Reportes</button></li>
-            <li><button>Configuración</button></li>
+            <li><button>Avisos</button></li>
+            <li><button>Boletas</button></li>
+            <li><button>Horarios</button></li>
+            <li><button>Cursos</button></li>
+            <li><button>Horarios de examenes </button></li>
+            <li><button>Actividades</button></li>
           </ul>
         </section>
 
