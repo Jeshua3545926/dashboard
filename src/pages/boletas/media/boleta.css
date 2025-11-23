@@ -7,14 +7,11 @@
 }
 
 table.report {
-  width: 40%;
+  width: 100%;
   border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.588);
-  font-size: 20px;
-  margin-left: 160px;
-  margin-top: 60px;
-  height: 20%;
-  border-radius: 10px 10px;
+  background: rgba(255, 255, 255, 0.88);
+  font-size: 18px;
+  border-radius: 10px;
 }
 
 h2 {
@@ -27,9 +24,10 @@ h2 {
 .principal {
   display: grid;
   background-color: #182132;
-  height: 100vh;
-  grid-template-columns: repeat(2, 1fr);
-
+  min-height: 100vh;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 table.report thead th {
@@ -42,10 +40,12 @@ table.report thead th {
 
 
 .alumno {
-  margin: 200px 20px 20px 20px;
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.656);
-  background-color: rgba(0, 0, 0, 0);
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+  border: none;
 }
 
 button {
@@ -53,11 +53,9 @@ button {
   margin-left: 310px;
 }
 .alumno{
-    margin: 200px 20px 20px 20px;
-    border-radius: 10px;
-    color: rgba(255, 255, 255, 0.656);
-    background-color: rgba(0, 0, 0, 0.61);
-    padding: 100px 100px;
+  margin: 8px 0;
+  padding: 8px 12px;
+  background-color: transparent;
 }
 
 button{
@@ -101,5 +99,80 @@ table.report tbody td {
 
 /* Rayado tipo cebra */
 table.report tbody tr:nth-child(even) {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0);
+}
+
+.table-container {
+  width: 100%;
+  overflow: auto;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alumno-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+}
+
+.boleta-panel {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0);
+  margin: 0 20px 0 20p;
+  backdrop-filter: blur(4px);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.alumno-name {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.alumno-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.alumno-name:hover {
+  color: #ffffff;
+}
+
+.alumno-name:hover::after {
+  width: 100%;
 }
