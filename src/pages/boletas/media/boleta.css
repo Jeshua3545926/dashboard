@@ -40,6 +40,7 @@ table.report thead th {
   font-weight: bold;
 }
 
+
 .alumno {
   margin: 200px 20px 20px 20px;
   border-radius: 10px;
@@ -50,6 +51,19 @@ table.report thead th {
 button {
   color: white;
   margin-left: 310px;
+}
+.alumno{
+    margin: 200px 20px 20px 20px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.656);
+    background-color: rgba(0, 0, 0, 0.61);
+    padding: 100px 100px;
+}
+
+button{
+    color: white;
+    margin-left: 200px;
+
 }
 
 .col-clave {
