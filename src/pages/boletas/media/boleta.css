@@ -16,6 +16,7 @@ h2 {
 }
 .principal{
     display:grid;
+    height: 100vh;
     grid-template-columns:repeat(2,1fr);
     
 }

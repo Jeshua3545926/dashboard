@@ -8,7 +8,10 @@ const App = () => {
 
 const navigate = useNavigate();
   const handlebolet = () => {
-    navigate('/boleta');
+    navigate('/Boleta');
+  }
+  const handleCursos = () => {
+    navigate('/cursos')
   }
   return (
     <div className="App">
@@ -22,7 +25,7 @@ const navigate = useNavigate();
             <li><button>Reportes</button></li>
             <li><button>Avisos</button></li>
             <li><button>Horarios</button></li>
-            <li><button>Cursos</button></li>
+            <li><button onClick={handleCursos}>Cursos</button></li>
             <li><button>Horarios de examenes </button></li>
             <li><button>Actividades</button></li>
           </ul>
