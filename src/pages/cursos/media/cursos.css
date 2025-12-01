@@ -84,7 +84,7 @@
   transition: opacity 0.25s ease;
 }
 
-/* Cuando se arrastra, aparece */
+/* Cuando se arrastra, aparece */dgfdfgfdgdf
 .card.liquid-active::after {
   opacity: 1;
 }
