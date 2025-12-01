@@ -1,65 +1,118 @@
-/* ===== CONTENEDOR PRINCIPAL ===== */
+/* === FONDO ANIMADO PREMIUM === */
 .Cursos-padre {
-    height: 130vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(20px);
-    background: #202121a4;  /* Fondo claro profesional */
-    padding: 40px 20px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #222;
+  background: radial-gradient(circle at 30% 30%, #111, #000);
 }
 
-/* ===== GRID ===== */
-.cursos {
-    width: 70%;
-    margin-bottom: 1100px;
-    margin-right: 70px;
-    margin-left: 70px;
-    height: 5px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+.Cursos-padre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 40%, #0048ff40, transparent 70%),
+    radial-gradient(circle at 30% 70%, #ff00c840, transparent 70%),
+    radial-gradient(circle at 20% 20%, #00ffd540, transparent 70%);
+  filter: blur(80px);
+  animation: nebula 12s infinite alternate ease-in-out;
 }
 
-/* ===== TARJETAS ===== */
-.cursos div {
-    background: linear-gradient(to left,rgb(15, 23, 28), rgb(0, 60, 255) rgba(0, 0, 0, 0));
-    padding: 5px 25px;
-    margin-bottom:20px ;
-    margin-top:20px ;
-    border-radius: 14px;
-    color: white;
-    border: 1px solid #e6e6e699;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform .25s ease;
+@keyframes nebula {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  50%  { transform: translate(40px, -20px) scale(1.1); }
+  100% { transform: translate(-30px, 30px) scale(1); }
 }
 
-/* Hover profesional de verdad */
-.cursos div:hover {
-    transform: translateY(-6px);
+
+/* === GRID === */
+.cursos-especialidades {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1300px;
+  margin: auto;
 }
 
-/* ===== TÍTULOS ===== */
-.cursos h3 {
-    margin-bottom: 0.6rem;
-    font-size: 20px;
-    color: #1c1c1c;
+
+/* === TARJETAS GLASS === */
+.card {
+  position: relative;
+  padding: 28px;
+  height: 180px;
+  border-radius: 22px;
+  color: white;
+  cursor: grab;
+  user-select: none;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.15),
+    0 15px 40px rgba(0, 0, 0, 0.45);
+
+  transition: transform .25s;
 }
 
-/* ===== TEXTO ===== */
-.cursos p {
-    font-size:20px;
-    line-height: 1.55;
-    color: #b8b8b8;
+/* === ESQUINA LÍQUIDA — EL SECRETO === */
+.card::after {
+  content: "";
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.177);
+  filter: blur(20px);
+
+  /* posición dinámica desde TS */
+  left: var(--lx, -100px);
+  top: var(--ly, -100px);
+
+  transform: scale(calc(0.7 + var(--drag, 0) * 0.5));
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 850px) {
-    .cursos {
-        grid-template-columns: 1fr;
-    }
+/* Cuando se arrastra, aparece */
+.card.liquid-active::after {
+  opacity: 1;
+}
+
+
+/* === TEXTO === */
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0;
+  opacity: .85;
+  font-size: 16px;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .cursos-especialidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cursos-especialidades {
+    grid-template-columns: 1fr;
+  }
 }
