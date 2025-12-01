@@ -1,0 +1,118 @@
+/* === FONDO ANIMADO PREMIUM === */
+.Cursos-padre {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+
+  background: radial-gradient(circle at 30% 30%, #111, #000);
+}
+
+.Cursos-padre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 40%, #0048ff40, transparent 70%),
+    radial-gradient(circle at 30% 70%, #ff00c840, transparent 70%),
+    radial-gradient(circle at 20% 20%, #00ffd540, transparent 70%);
+  filter: blur(80px);
+  animation: nebula 12s infinite alternate ease-in-out;
+}
+
+@keyframes nebula {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  50%  { transform: translate(40px, -20px) scale(1.1); }
+  100% { transform: translate(-30px, 30px) scale(1); }
+}
+
+
+/* === GRID === */
+.cursos-especialidades {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+
+/* === TARJETAS GLASS === */
+.card {
+  position: relative;
+  padding: 28px;
+  height: 180px;
+  border-radius: 22px;
+  color: white;
+  cursor: grab;
+  user-select: none;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.15),
+    0 15px 40px rgba(0, 0, 0, 0.45);
+
+  transition: transform .25s;
+}
+
+/* === ESQUINA LÍQUIDA — EL SECRETO === */
+.card::after {
+  content: "";
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.177);
+  filter: blur(20px);
+
+  /* posición dinámica desde TS */
+  left: var(--lx, -100px);
+  top: var(--ly, -100px);
+
+  transform: scale(calc(0.7 + var(--drag, 0) * 0.5));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Cuando se arrastra, aparece */dgfdfgfdgdf
+.card.liquid-active::after {
+  opacity: 1;
+}
+
+
+/* === TEXTO === */
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0;
+  opacity: .85;
+  font-size: 16px;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .cursos-especialidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cursos-especialidades {
+    grid-template-columns: 1fr;
+  }
+}

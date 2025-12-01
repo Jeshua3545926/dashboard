@@ -1,0 +1,60 @@
+
+/* Contenedor centrado en la página */
+.horario-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	min-height: calc(100vh - 80px);
+	padding: 40px 20px;
+	box-sizing: border-box;
+	/* estado inicial para animación */
+	opacity: 0;
+	transform: translateY(12px);
+	transition: opacity 2000ms cubic-bezier(.2,.9,.2,1), transform 2000ms cubic-bezier(.2,.9,.2,1);
+}
+h1 {
+    text-align: center;
+}
+/* Imagen responsiva con borde gris semitransparente y bordes redondeados */
+.horario-img {
+	max-width: 33%;
+	height: auto;
+	border: 10px solid rgba(124, 124, 124, 0.45); /* gris semitransparente */
+	border-radius: 14px;
+	box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+	background-clip: padding-box;
+}
+
+/* Título centrado y justo encima de la imagen */
+.horario-container h2 {
+    font-family:serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 2rem;
+	color: #ffffff;
+}
+
+/* Borde pequeño para h2 (y h1 si se desea) con mismo color que la imagen */
+.horario-container h2{
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0;
+  border-bottom: 2px solid rgba(124, 124, 124, 0.45); /* mismo gris semitransparente */
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+/* clase activa para mostrar la página con transición */
+.horario-container.enter {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 3200px) {
+	.horario-img { max-width: 1050px; }
+}
+

@@ -1,54 +1,29 @@
 import { createBrowserRouter } from "react-router-dom";
 import Boleta from "./pages/boletas/boleta";
 import App from "./pages/App";
-
+import Cursos from "./pages/cursos/cursos";
+import Horario from "./pages/Horario/horario";
 
 export const router = createBrowserRouter([
-/* Enrutador de secciones de la pagina  */
+  /* Enrutador de secciones de la pagina  */
 
   {
     path: "/",
     element: <App />,
   },
-{
-    path: "/boleta",
-    element: <Boleta />,
-  },
-  // {
-  //   path: "/alumnos",
-  //   element: <Alumnos />,
-  // },
-  // {
-  //   path: "/credencial",
-  //   element: <Credencial />,
-  // },
-  // {
-  //   path: "/reportes",
-  //   element: <Reportes />,
-  // },
-  // {
-  //   path: "/avisos",
-  //   element: <Avisos />,
-  // },
-  // {
-  //   path: "/horarios",
-  //   element: <Horarios />,
-  // },
-  // {
-  //   path: "/cursos",
-  //   element: <Cursos />,
-  // },
-  // {
-  //   path: "/horarios-examenes",
-  //   element: <HorariosExamenes />,
-  // },
-  // {
-  //   path: "/actividades",
-  //   element: <Actividades />,
-  // },
+ {
+   path: "/Boleta",
+   element: <Boleta />
+ },
+   {
+     path: "/cursos",
+     element: <Cursos />,
+   },
+  {
+    path: "/horario",
+    element: <Horario />,
+  }
 
-  
-  
 
-  
+
 ]);
