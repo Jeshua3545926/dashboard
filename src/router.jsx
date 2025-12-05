@@ -21,6 +21,14 @@ export const router = createBrowserRouter([
     element: <Cursos />,
   },
   {
+    path: "/Boleta",
+    element: <Boleta />
+  },
+  {
+    path: "/cursos",
+    element: <Cursos />,
+  },
+  {
     path: "/horario",
     element: <Horario />,
   },
@@ -28,7 +36,5 @@ export const router = createBrowserRouter([
     path: "/credencial",
     element: <Credencial />,
   }
-
-
 
 ]);

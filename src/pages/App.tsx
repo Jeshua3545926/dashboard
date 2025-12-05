@@ -1,7 +1,6 @@
 import './App.css';
 import { useNavigate } from 'react-router-dom';
-// import { helloWorld } from '../Actions/registerAction'
-// import { registerAction } from '../Actions/action2';
+
 
 
 const App = () => {
@@ -30,6 +29,7 @@ const navigate = useNavigate();
             <li><button onClick={handleCredencial}>Credencial</button></li>
             <li><button onClick={handleHorario}>Horarios</button></li>
             <li><button onClick={handleCursos}>Cursos</button></li>
+
           </ul>
         </section>
       </div>
