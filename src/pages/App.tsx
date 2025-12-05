@@ -25,7 +25,6 @@ const navigate = useNavigate();
             <li><button onClick={handlebolet}>Boletas</button></li>
             <li><button>Alumnos</button></li>
             <li><button>Credencial</button></li>
-            <li><button>Avisos</button></li>
             <li><button onClick={handleHorario}>Horarios</button></li>
             <li><button onClick={handleCursos}>Cursos</button></li>
           </ul>
